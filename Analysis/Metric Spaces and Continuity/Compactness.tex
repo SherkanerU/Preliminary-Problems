@@ -42,10 +42,25 @@
 \bigskip
 \newline
 {\bf Common Lemmas:}
-\newline
-If $f: X \to Y$ is a continuious function between metric spaces $(X,d)$ and $(Y,\varrho)$ then $f(X)$ is bounded.
+\newline \newline
+{\bf (1)} If $f: X \to Y$ is a continuious function between metric spaces $(X,d)$ and $(Y,\varrho)$ then $f(X)$ is bounded.
 \begin{proof}
 Assume towards a contradiction that $f(X)$ is not bounded.  Therefore, for a fixed $y\in f(X)$ we have that for every $R$ there is some $f(x)$ such that $\varrho(y, f(x)) > R$.  Therefore we can construct some sequence $(x_n)_{n=1}^\infty$ such that $\varrho(f(x_n), y) > n$.  Since $X$ is compact there must be some $(x_{n_k})_{k=1}^\infty$ with $x_{n_k} \to x_0 \, (\in X)$.  Since $f$ is continuous, we have that $f(x_{n_k}) \to f(x_0) \, (\in Y)$.  Since these sequences are covergent, it must be that $\varrho(f(x_{n_k}) ,y) \to \varrho(f(x_0) , y)$.  However, $\varrho(x_{n_k} , y) > n_k > k$ for all $k$.  This is a contradiction and therefore $f(X)$ is bounded.
 \end{proof}
+$\newline$
+{\bf (2)} If $f: X \to \mathbb{R}$ with $X$ compact, then $f$ must achieve a maximum and minimum value.
+\begin{proof}
+It suffices to show only $f$ achieving a maximum since the cases are the same.  Applying the first lemma we know that $f(X)$ is a bounded subset of $\mathbb{R}$.  Therefore $\alpha := \sup f(X)$ exists.  Since $\alpha$ is the supremum of the range of $f$ for every $\epsilon$ there must be some $x$ such that $\alpha - \epsilon < f(x) \leq \alpha$.  Letting $\epsilon_n := \frac{1}{n}$ we can construct a sequence $(x_n)_{n=1}^\infty$ with $f(x_n) \to \alpha$.  Also since $X$ is compact there must be some $(x_{n_k})_{k=1}^\infty$ with $x_{n_k} \to x_0 \, (\in X)$.  Since $f(x_n)$ is convergent, its subsequences must also be convergent to the same limit.  And by the continuity of $f$ we have:
+$$ f(x_0) \leftarrow f (x_{n_k}) \to \alpha $$
+By the uniqueness of limits $f(x_0) = \alpha$ is a maximum. 
+\end{proof}
+
+$\newline$
+{\bf Problems:} \newline
+{\bf (1)} For $f: X \to \mathbb{R}$ with $X$ compact and $\forall x \in X \ \ f(x) > 0$ , then there exists $\delta > 0$ such that for all $x \in X \ \ f(x) \geq \delta$
+\begin{proof}
+By applying lemma 2 we know that $f$ must achieve a minimum for some $x_0 \in X$ and by hypothesis we know that $f(x_0) > 0$.  Therefore we can pick $\delta := f(x_0)$ and we know that for all $x \in X \ \ f(x) \geq f(x_0) = \delta$.
+\end{proof}
+
 
 \end{document}
