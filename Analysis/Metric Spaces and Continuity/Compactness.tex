@@ -1,0 +1,51 @@
+\documentclass[12pt,leqno]{amsart}
+\pagestyle{plain}
+\usepackage{latexsym,amsmath,amssymb}
+%\usepackage[notref,notcite]{showkeys} 
+
+\setlength{\oddsidemargin}{1pt}
+\setlength{\evensidemargin}{1pt}
+\setlength{\marginparwidth}{30pt} % these gain 53pt width
+\setlength{\topmargin}{1pt}       % gains 26pt height
+\setlength{\headheight}{1pt}      % gains 11pt height
+\setlength{\headsep}{1pt}         % gains 24pt height
+%\setlength{\footheight}{12 pt} 	  % cannot be changed as number must fit
+\setlength{\footskip}{24pt}       % gains 6pt height
+\setlength{\textheight}{650pt}    % 528 + 26 + 11 + 24 + 6 + 55 for luck
+\setlength{\textwidth}{460pt}     % 360 + 53 + 47 for luck
+
+
+
+\def\dsp{\def\baselinestretch{1.35}\large
+\normalsize}
+%%%%This makes a double spacing. Use this with 11pt style. If you
+%%%%want to use this just insert \dsp after the \begin{document}
+%%%%The correct baselinestretch for double spacing is 1.37. However
+%%%%you can use different parameter.
+
+
+\def\U{{\mathcal U}}
+
+
+
+
+
+
+
+
+
+\begin{document}
+\bigskip
+\centerline{\bf{Compactness}}
+\medskip
+\noindent \small{Many of these problems are from a collection made by Behnam Esmayli, who also references a collection created by Cezar Lupu.}
+\bigskip
+\newline
+{\bf Common Lemmas:}
+\newline
+If $f: X \to Y$ is a continuious function between metric spaces $(X,d)$ and $(Y,\varrho)$ then $f(X)$ is bounded.
+\begin{proof}
+Assume towards a contradiction that $f(X)$ is not bounded.  Therefore, for a fixed $y\in f(X)$ we have that for every $R$ there is some $f(x)$ such that $\varrho(y, f(x)) > R$.  Therefore we can construct some sequence $(x_n)_{n=1}^\infty$ such that $\varrho(f(x_n), y) > n$.  Since $X$ is compact there must be some $(x_{n_k})_{k=1}^\infty$ with $x_{n_k} \to x_0 \, (\in X)$.  Since $f$ is continuous, we have that $f(x_{n_k}) \to f(x_0) \, (\in Y)$.  Since these sequences are covergent, it must be that $\varrho(f(x_{n_k}) ,y) \to \varrho(f(x_0) , y)$.  However, $\varrho(x_{n_k} , y) > n_k > k$ for all $k$.  This is a contradiction and therefore $f(X)$ is bounded.
+\end{proof}
+
+\end{document}
