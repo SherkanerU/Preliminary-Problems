@@ -85,6 +85,7 @@ $$ f(x) = \frac{||Ax||}{||x||} \geq \delta \iff ||Ax|| \geq \delta||x|| \ \ \ \ 
 It remains to show the above for the rest of $\mathbb{R}^n$.  Since this inequality holds trivially for the zero vector, fix some arbitrary non zero vector, $x$, in $\mathbb{R}^n$.  $x$ can be represented as $t\hat x$ with $\hat x$ a unit vector and $t \in \mathbb{R}$ nonzero.  Since $\hat x$ is a unit vector $\hat x \in S$ and we can write:
 $$ ||A(x)|| = ||A(t\hat x)|| = t||A(\hat x)|| \geq t\delta||\hat x|| = t\delta||x|| $$
 $$ \iff ||Ax|| \geq \delta||x|| $$
+Therefore the delta found for $S$ is sufficient for every $x \in \mathbb{R}^n$.
 \end{proof}  
 
 \end{document}
