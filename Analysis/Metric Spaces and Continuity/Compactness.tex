@@ -78,12 +78,21 @@ $\newline$
 {\bf(3)} Let $A$ be a non singular linear map $\mathbb{R}^n \to \mathbb{R}^n$ (an $n \times n$ matrix) show that there exists some $\delta > 0$ such that:
 $$ ||A(x)|| = ||Ax|| \geq \delta ||x|| \ \ \forall x \in \mathbb{R}^n$$
 \begin{proof}
-Note that since $A$ is nonsingular: $||Ax|| = 0 \iff ||x|| = 0$ since the only vector mapped to the 0 vector is the 0 vector.  Therefore we can fix an arbitrary closed n-cell of diameter l denoted $C_o$, and another arbitrary n-cell of Diameter $i$ denoted $C_i$ with $0 < i < l$.  Let $C := C_o \setminus C_i$ in $\mathbb{R}^n$.  Since $C$ is a closed and bounded subset of $\mathbb{R}^n$ it is compact.  Define the function $f: C \to \mathbb{R}^n$ by: 
+Note that since $A$ is nonsingular: $||Ax|| = 0 \iff ||x|| = 0$ since the only vector mapped to the 0 vector is the 0 vector.  Therefore we can fix the sphere of radius 1, denoted $S$.  This is compact since it is a closed and bounded susbset of $\mathbb{R}^n$.  Since $||x||$ and $||Ax||$ are nonzero for $x \in S$.  We can then define the function $f: S \to \mathbb{R}^n$ as follows:
+$$ f(x) := \frac{||Ax||}{||x||} $$
+This function is defined over a compact set and is positive for all $x \in S$.  Therefore, problem {\bf (1)} applies and there must exist some $\delta > 0 $ such that:
+$$ f(x) = \frac{||Ax||}{||x||} \geq \delta \iff ||Ax|| \geq \delta||x|| \ \ \ \ (x\in S)$$
+It remains to show the above for the rest of $\mathbb{R}^n$.  Since this inequality holds trivially for the zero vector, fix some arbitrary non zero vector, $x$, in $\mathbb{R}^n$.  $x$ can be represented as $t\hat x$ with $\hat x$ a unit vector and $t \in \mathbb{R}$ nonzero.  Since $\hat x$ is a unit vector $\hat x \in S$ and we can write:
+$$ ||A(x)|| = ||A(t\hat x)|| = t||A(\hat x)|| \geq t\delta||\hat x|| = t\delta||x|| $$
+$$ \iff ||Ax|| \geq \delta||x|| $$
+\end{proof}  
+
+\end{document}
+
+and another arbitrary n-cell of Diameter $i$ denoted $C_i$ with $0 < i < l$.  Let $C := C_o \setminus C_i$ in $\mathbb{R}^n$.  Since $C$ is a closed and bounded subset of $\mathbb{R}^n$ it is compact.  Define the function $f: C \to \mathbb{R}^n$ by: 
 $$ f(x) := \frac{||Ax||}{||x||} $$
 $f$ is a continuous function since the standard norm on $\mathbb{R}^n$ is continuous. The domain of $f$ does not include the 0 vector so it is constantly positive and defined over a compact domain.  Using the results of problem {\bf (1)} there is some $\delta > 0$ such that: 
 $$f(x) \geq \delta \iff ||Ax|| \geq \delta||x||$$
 Since $C$ can be defined to include any element of $\mathbb{R}^n$ it is true over all of $\mathbb{R}^n$ and the proof is complete.
 \end{proof}
 Oops this one is wrong!  I think I can modify the solution
-
-\end{document}
