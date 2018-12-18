@@ -61,6 +61,17 @@ $\newline$
 \begin{proof}
 By applying lemma 2 we know that $f$ must achieve a minimum for some $x_0 \in X$ and by hypothesis we know that $f(x_0) > 0$.  Therefore we can pick $\delta := f(x_0)$ and we know that for all $x \in X \ \ f(x) \geq f(x_0) = \delta$.
 \end{proof}
-
+$\newline$
+{\bf (2)} For a set compact subset $K$ and $F$ a closed subset of some metric space $(X,d)$.  Show that if $K\cap F = \emptyset$ then there exists some $\delta >0$ such that:
+$$ \forall p \in K \ \ \forall q \in F \ \ d(p,q) \geq \delta  $$
+\begin{proof}
+Assume towards a contradiction that for all $\delta > 0$ there exists some $p\in K$ and $q \in F$ such that $d(p,q) < \delta$.  Letting $\delta_n := \frac{1}{n}$ for any $n$ we can construct a sequences $(p_n)_{n=1}^\infty$ in $K$ and $(q_n)_{n=1}^\infty$ in F such that:
+$$ d(p_n,q_n) \to 0 $$
+Since $p_n$ is a sequence in a compact set there must exist some subsequence $(p_{n_k})_{k=1}^\infty$ that is convergent to some $p_0 \in K$.  I claim that the sequence given by $(q_{n_k})_{k=1}^\infty$ is convergent to $p_0$.
+$$ d(q_{n_k}, p_0) \leq d(q_{n_k}, p_{n_k}) + d(p_{n_k}, p_0) $$
+and we can fix some $n_0$ where for all $n \geq n_0$:
+$$ d(q_{n_k}, p_0) \leq d(q_{n_k}, p_{n_k}) + d(p_{n_k}, p_0) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon $$
+Since the sequence $q_{n_k}$ is convergent sequence in a closed set, its limit point is necessarily included in the set.  Therefore, $p_0 \in F$.  We can conlude that $\{ p_0 \} \subset F\cap K$ which is a contradiction.
+\end{proof}
 
 \end{document}
