@@ -73,5 +73,16 @@ and we can fix some $n_0$ where for all $n \geq n_0$:
 $$ d(q_{n_k}, p_0) \leq d(q_{n_k}, p_{n_k}) + d(p_{n_k}, p_0) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon $$
 Since the sequence $q_{n_k}$ is convergent sequence in a closed set, its limit point is necessarily included in the set.  Therefore, $p_0 \in F$.  We can conlude that $\{ p_0 \} \subset F\cap K$ which is a contradiction.
 \end{proof}
+\noindent I am confused here because I seem to have solved this problem without employing the strategy of {\bf (1)}.  My idea is that you could fix an element of $F$ and define a function the is the distance from the points in $K$ to the fixed element of $F$.  There is necessarily a positive mimimum of this function.  For each element of $F$ there is a fixed minimum value, and we could define another funcion on $F$ that ties these elements to their minimum distanced elements in $F$ and I would claim that this set has a minimum positive value in which case the question would follow but I don't kow how to prove the last step! \newline
+$\newline$
+{\bf(3)} Let $A$ be a non singular linear map $\mathbb{R}^n \to \mathbb{R}^n$ (an $n \times n$ matrix) show that there exists some $\delta > 0$ such that:
+$$ ||A(x)|| = ||Ax|| \geq \delta ||x|| \ \ \forall x \in \mathbb{R}^n$$
+\begin{proof}
+Note that since $A$ is nonsingular: $||Ax|| = 0 \iff ||x|| = 0$ since the only vector mapped to the 0 vector is the 0 vector.  Therefore we can fix an arbitrary closed n-cell of diameter l denoted $C_o$, and another arbitrary n-cell of Diameter $i$ denoted $C_i$ with $0 < i < l$.  Let $C := C_o \setminus C_i$ in $\mathbb{R}^n$.  Since $C$ is a closed and bounded subset of $\mathbb{R}^n$ it is compact.  Define the function $f: C \to \mathbb{R}^n$ by: 
+$$ f(x) := \frac{||Ax||}{||x||} $$
+$f$ is a continuous function since the standard norm on $\mathbb{R}^n$ is continuous. The domain of $f$ does not include the 0 vector so it is constantly positive and defined over a compact domain.  Using the results of problem {\bf (1)} there is some $\delta > 0$ such that: 
+$$f(x) \geq \delta \iff ||Ax|| \geq \delta||x||$$
+Since $C$ can be defined to include any element of $\mathbb{R}^n$ it is true over all of $\mathbb{R}^n$ and the proof is complete.
+\end{proof}
 
 \end{document}
