@@ -1,1 +1,2 @@
 # Preliminary Problems
+Working through problem sets from various sources in preparation for the University of Pittsburgh analysis preliminary exam.  This set will include my solutions (possibly not all perfect haha) to different problems given by professors here and some from the Berkely problems sets.  I will also take Linear Algebra prelims eventually and will probably put those problems here as well!
