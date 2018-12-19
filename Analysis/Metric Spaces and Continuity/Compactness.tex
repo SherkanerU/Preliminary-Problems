@@ -113,4 +113,11 @@ Since $K$ is compact it is bounded, $A$ is also bounded above because of this fa
 $$ d(k_0, {\bf 0}) \leftarrow d(k_{n_k}, {\bf 0}) \rightarrow \alpha $$ 
 By the uniqueness of limits, $d(k_0, {\bf 0}) = \alpha$ and this is a maximal distance from the origin!
 \end{proof}
+$\newline$
+{\bf (6)} For $K \subset \mathbb{R}^n$ a compact set that is disjoint from a closed set $F$, then there is a closest point of $K$ to the set $F$.
+\begin{proof}
+By applying the result of problem {\bf (2)} we know that there is some $\delta > 0$ such that for all $k \in K$ and $f \in F \ \ d(k,f) \geq \delta $.  We can then define the set:
+$$ A := \{ x \in \mathbb{R} : \exists k \in K \ \ \exists f \in F \ \ d(f,k) = x  \} $$
+By the above, we know that $A$ is bounded below by some positive $\delta$.  Therefore $\beta := \inf A$ exists and is positive as well.  As before, we can fix sequences $(k_n)_{n=1}^\infty$ and $(f_n)_{n=1}^\infty$ such that $d(k_n,f_n) \to \beta$.  Since $(k_n)$ is a sequence in a compact set it omits a sequence $(k_{n_\ell})_{\ell = 1}^\infty$ which is convergent to some $k_0 \in K$.  We know that $d(k_{n_\ell}, f_{n_\ell}) \to \beta$.  It is also true that $d(k_0, )$
+\end{proof} 
 \end{document}
