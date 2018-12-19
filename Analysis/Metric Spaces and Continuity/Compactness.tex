@@ -87,13 +87,12 @@ $$ ||A(x)|| = ||A(t\hat x)|| = t||A(\hat x)|| \geq t\delta||\hat x|| = t\delta||
 $$ \iff ||Ax|| \geq \delta||x|| $$
 Therefore the delta found for $S$ is sufficient for every $x \in \mathbb{R}^n$.
 \end{proof}  
-
-\end{document}
-
-and another arbitrary n-cell of Diameter $i$ denoted $C_i$ with $0 < i < l$.  Let $C := C_o \setminus C_i$ in $\mathbb{R}^n$.  Since $C$ is a closed and bounded subset of $\mathbb{R}^n$ it is compact.  Define the function $f: C \to \mathbb{R}^n$ by: 
-$$ f(x) := \frac{||Ax||}{||x||} $$
-$f$ is a continuous function since the standard norm on $\mathbb{R}^n$ is continuous. The domain of $f$ does not include the 0 vector so it is constantly positive and defined over a compact domain.  Using the results of problem {\bf (1)} there is some $\delta > 0$ such that: 
-$$f(x) \geq \delta \iff ||Ax|| \geq \delta||x||$$
-Since $C$ can be defined to include any element of $\mathbb{R}^n$ it is true over all of $\mathbb{R}^n$ and the proof is complete.
+$\newline$
+{\bf (4)} Let $K$ and $F$ be compact and disjoint subsets of $\mathbb{R}^n$.  Show that there exists open sets $U$ and $V$ that contain $K$ and $F$, respectively, such that $U\cap V = \emptyset$
+\begin{proof}
+Since $K$ and $F$ are both compact sets we can apply the results of problem {\bf (2)} and find $\delta$ such that forall $k \in K$ and $f \in F$ it will be that $d(k,f) \geq \delta$.  By comactness we can also find finite $\delta/2$ dense sets in both $K$ and $F$.  More specifically, there exists:
+$$ \{ k_0, k_1, \dots , k_n\} \subset K  \ \ {\rm and } \ \ \{ f_0, f_1, \dots, f_{\ell} \} \subset F $$
+With the properties:
+$$ \forall k \in K \ \ \exists i \leq n \ \ d(k, k_i) < \frac{\delta}{2} \ \ {\rm and } \ \ \forall f \in F \ \ \exists j \leq \ell \ \ d(f, f_j) < \frac{\delta}{2}$$ 
 \end{proof}
-Oops this one is wrong!  I think I can modify the solution
+\end{document}
