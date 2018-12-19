@@ -103,4 +103,14 @@ $$ d(k_i,x) < \frac{\delta}{2} \ \ {\rm and } \ \ d(f_j, x) < \frac{\delta}{2} $
 $$ \Rightarrow d(k_i, f_j) \leq d(k_i, x) + d(x,f_j) < \delta $$
 Which is a contradiction with $\delta$ being chosen such that every element in $K$ and $F$ are $\delta$ distance apart. 
 \end{proof}
+$\newline$ 
+The next theme that is described in the collection is that taking limits gives items inside of compact sets!
+\newline
+{\bf (5)} If $K \subset \mathbb{R}^n$ is compact, then there is a farthest point of $K$ to the origin.
+\begin{proof} Begin by defining the set $A$ as follows:
+$$ A := \{ x \in \mathbb{R} : \exists k \in K \ \ d({\bf0}, k) = x\} $$
+Since $K$ is compact it is bounded, $A$ is also bounded above because of this fact.  Therefore we can define $\alpha := \sup A \,  (\in \mathbb{R})$.  We can also define a sequence $(x_n)_{n=1}^\infty$ in $A$ with $x_n \to \alpha$.  This sequence yields a sequence $(k_n)_{n=1}^\infty$ in $K$ such that $d(k_n, {\bf 0}) \to \alpha$.  Since $k_n$ is a sequence in a compact set there exists a futher subsequence $(k_{n_k})_{k=1}^\infty$ such that $k_{n_k} \to k_0 \, (\in K)$.  Since the distance metric is a continuous function and because of the properties of the sequence that $k_{n_k}$ is a subsequence of we have:
+$$ d(k_0, {\bf 0}) \leftarrow d(k_{n_k}, {\bf 0}) \rightarrow \alpha $$ 
+By the uniqueness of limits, $d(k_0, {\bf 0}) = \alpha$ and this is a maximal distance from the origin!
+\end{proof}
 \end{document}
