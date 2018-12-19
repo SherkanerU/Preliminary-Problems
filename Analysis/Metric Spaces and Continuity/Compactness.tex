@@ -118,6 +118,12 @@ $\newline$
 \begin{proof}
 By applying the result of problem {\bf (2)} we know that there is some $\delta > 0$ such that for all $k \in K$ and $f \in F \ \ d(k,f) \geq \delta $.  We can then define the set:
 $$ A := \{ x \in \mathbb{R} : \exists k \in K \ \ \exists f \in F \ \ d(f,k) = x  \} $$
-By the above, we know that $A$ is bounded below by some positive $\delta$.  Therefore $\beta := \inf A$ exists and is positive as well.  As before, we can fix sequences $(k_n)_{n=1}^\infty$ and $(f_n)_{n=1}^\infty$ such that $d(k_n,f_n) \to \beta$.  Since $(k_n)$ is a sequence in a compact set it omits a sequence $(k_{n_\ell})_{\ell = 1}^\infty$ which is convergent to some $k_0 \in K$.  We know that $d(k_{n_\ell}, f_{n_\ell}) \to \beta$.  It is also true that $d(k_0, )$
+By the above, we know that $A$ is bounded below by some positive $\delta$.  Therefore $\beta := \inf A$ exists and is positive as well.  As before, we can fix sequences $(k_n)_{n=1}^\infty$ and $(f_n)_{n=1}^\infty$ such that $d(k_n,f_n) \to \beta$.  Since $(k_n)$ is a sequence in a compact set it omits a sequence $(k_{n_\ell})_{\ell = 1}^\infty$ which is convergent to some $k_0 \in K$.  We know that $d(k_{n_\ell}, f_{n_\ell}) \to \beta$.  It is also true that $d(k_0, f_{n_\ell}) \to \beta$ since:
+$$ d(k_0 , f_{n_\ell}) - \beta \leq d(k_0, k_{n_\ell}) + d(k_{n_\ell}, f_{n_\ell}) - \beta < \frac{\epsilon}{2} + \frac{\epsilon}{2} + \beta - \beta = \epsilon  $$
+and:
+$$ \beta - d(k_0, f_{n_\ell}) =  \beta  - (k_0, f_{n_\ell}) + d(k_0, k_{n_\ell})  - d(k_0, k_{n_\ell}) $$
+$$ = \beta + d(k_0, k_{n_\ell}) - ((k_0, f_{n_\ell}) +d(k_0, k_{n_\ell}) ) \leq \beta + d(k_0, k_{n_\ell}) - d(k_{n_\ell}, f_{n_\ell}) $$
+$$ < \beta + \frac{\epsilon}{2}  - (\beta - \frac{\epsilon}{2}) = \epsilon $$
+Since $(f_{n_\ell})$ is within $\beta$ of $k_0$ in its limit then for some $N_0$ with $\ell \geq N_0$ the sequence $(f_{n_\ell})_{\ell \geq N_0}^\infty$ must be contained in the closed ball, $B$, of radius $2\beta$ around $k_0$.  Since $B$ is closed and bounded in $\mathbb{R}^n$ then it is compact and therefore $(f_{n_\ell})_{\ell \geq N_0}^\infty$ must have a convergent subsequence $f_{n_{\ell_g}} \to f_0$ but since this is also a sequence in $F$ which is closed $f_0$ must be contained in $F$.
 \end{proof} 
 \end{document}
