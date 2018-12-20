@@ -124,6 +124,16 @@ and:
 $$ \beta - d(k_0, f_{n_\ell}) =  \beta  - (k_0, f_{n_\ell}) + d(k_0, k_{n_\ell})  - d(k_0, k_{n_\ell}) $$
 $$ = \beta + d(k_0, k_{n_\ell}) - ((k_0, f_{n_\ell}) +d(k_0, k_{n_\ell}) ) \leq \beta + d(k_0, k_{n_\ell}) - d(k_{n_\ell}, f_{n_\ell}) $$
 $$ < \beta + \frac{\epsilon}{2}  - (\beta - \frac{\epsilon}{2}) = \epsilon $$
-Since $(f_{n_\ell})$ is within $\beta$ of $k_0$ in its limit then for some $N_0$ with $\ell \geq N_0$ the sequence $(f_{n_\ell})_{\ell \geq N_0}^\infty$ must be contained in the closed ball, $B$, of radius $2\beta$ around $k_0$.  Since $B$ is closed and bounded in $\mathbb{R}^n$ then it is compact and therefore $(f_{n_\ell})_{\ell \geq N_0}^\infty$ must have a convergent subsequence $f_{n_{\ell_g}} \to f_0$ but since this is also a sequence in $F$ which is closed $f_0$ must be contained in $F$.
+Since $(f_{n_\ell})$ is within $\beta$ of $k_0$ in its limit then for some $N_0$ with $\ell \geq N_0$ the sequence $(f_{n_\ell})_{\ell \geq N_0}^\infty$ must be contained in the closed ball, $B$, of radius $2\beta$ around $k_0$.  Since $B$ is closed and bounded in $\mathbb{R}^n$ then it is compact and therefore $(f_{n_\ell})_{\ell \geq N_0}^\infty$ must have a convergent subsequence $f_{n_{\ell_g}} \to f_0$ but since this is also a sequence in $F$ which is closed $f_0$ must be contained in $F$.  I will now show that $d(k_0, f_0) = \beta$:
+$$ d(k_0, f_0) - \beta \leq d(k_0, f_{n_{\ell_g}}) + d(f_{n_{\ell_g}}, f_0) - \beta$$
+Since we know that $d(k_0, f_{n_{\ell}}) \to \beta$ we can write:
+$$ \leq \beta + \frac{\epsilon}{2} + \frac{\epsilon}{2} - \beta = \epsilon $$
+Also:
+$$ \beta - d(k_0, f_0) \leq \beta - d(k_0, f_0) - d(f_0, f_{n_{\ell_g}}) + d(f_0,f_{n_{\ell_g}}) $$
+$$ = \beta + d(f_0, f_{n_{\ell_g}}) - (d(k_0, f_0) + d(f_0, f_{n_{\ell_g}}) \leq \beta + d(f_0, f_{n_{\ell_g}}) - d(k_0, f_{n_{\ell_g}}) $$
+$$ < \beta + \frac{\epsilon}{2} - (\beta - \frac{\epsilon}{2}) = \epsilon $$
+$$ |\beta - d(k_0, f_0)| < \epsilon \ \  \ \ \text{       for all } \epsilon >0 $$
+$$ \iff \beta = d(k_0, f_0) $$
+We have found points in $F$ and $K$ which are at a distance apart equal to the infimum of all the distances between K and F which is positive!
 \end{proof} 
 \end{document}
