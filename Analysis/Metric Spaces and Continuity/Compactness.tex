@@ -136,4 +136,15 @@ $$ |\beta - d(k_0, f_0)| < \epsilon \ \  \ \ \text{       for all } \epsilon >0 
 $$ \iff \beta = d(k_0, f_0) $$
 We have found points in $F$ and $K$ which are at a distance apart equal to the infimum of all the distances between K and F which is positive!
 \end{proof} 
+$\newline$
+{\bf (7)} Let $X$ be a metric space and $f: X \to X$ be a contraction mapping.  Suppose that $K \subset X$ is a compact and nonempty set that satisfies $f(K) = K$.  Prove that $K$ contains one single point.
+\begin{proof}
+Note that since compact sets are bounded they have a finite diameter which is defined to be the supremum of all of the distances of all of the pairs of points in the set.  For a compact set $C$ this is denoted as $diam \, C$.  Also note that for a given compact set $C$ there exist points in $C$ which acieve this diamater.  Therefore if we assume that $K$ has more than one point there exists $x^*, y^* \in K$ such that $d(x^*, y^*) = diam\, K > 0$.  If we were to consider $f(K)$ we can easily show that this is compact.  
+\newline
+To do this fix some arbitrary sequence in $(y_n)_{n=1}^\infty$ n $f(K)$.  This induces some $(x_n)_{n=1}^\infty$ in $K$.  This has a convergent subsequence $x_{n_k} \to x_0 \in K$.  Since $f$ is a contraction mapping we know:
+$$ f(f(x_0), f(x_{n_k})) \leq k d(x_0, x_{n_k}) \to 0 $$
+$$ \Rightarrow y_{n_k}  = f(x_{n_k}) \to f(x_0) \in f(K) $$
+Since $f(K)$ is also compact we can conclude that there must also be points $x^{**}, y^{**} \in f(K)$ such that $d(x^{**}, y^{**}) = diam \, f(K)$. 
+$$d(x^{**}, y^{**}) <  $$
+\end{proof}
 \end{document}
