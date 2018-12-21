@@ -54,6 +54,11 @@ It suffices to show only $f$ achieving a maximum since the cases are the same.  
 $$ f(x_0) \leftarrow f (x_{n_k}) \to \alpha $$
 By the uniqueness of limits $f(x_0) = \alpha$ is a maximum. 
 \end{proof}
+$\newline$
+{\bf (3)} If $f: X \to Y$ is continuous with $X$ compact and $Y$ a metric space then the image of $f$ is compact.
+\begin{proof} Take an arbitrary sequence $(f(x_n))_{n=1}^\infty$ in ${\rm Im}f$.  There must exist some convergent subsequence $x_{n_k}$ of $x_n$ with $x_{n_k} \to x_0 (\in X)$.  By the continuity of $f$ we know that $f(x_{n_k}) \to f(x_0)$ which proves the compactness of ${\rm Im}f$.
+
+\end{proof}
 
 $\newline$
 {\bf Problems:} \newline
@@ -148,5 +153,20 @@ Since $f(K)$ is also compact we can conclude that there must also be points $x^{
 $$d(x^{**}, y^{**}) =  d(f(x_0), f(y_0)) < d(x_0, y_0) \leq diam \, K $$
 $$ \Rightarrow diam \, f(K) < diam \, K \Rightarrow  K \not= f(K) $$
 Therefore, $K$ cannot have multiple points!
+\end{proof}
+$\newline$
+{\bf (8)} Let $r: [a,b] \to \mathbb{R}^n$ be a conitinuous curve (the path of a particle).  Suppose that $r(a) = (0, 0, \dots, 0)$ and $r(b) = (1,1, \dots, 1)$.  Prove that there exists a last time the particle touches the surface of the unit sphere. 
+\begin{proof}
+Since $r$ is continuous with a point inside the unit sphere and a point outside of the unit sphere we know that there exists at least one point where the particle is on the unit sphere.  Therefore we can define the set:
+$$ A := \{ x\in \mathbb{R}^n : d(r(x), {\bf 0}) = 1 \} $$
+This is nonempty and bounded above and below by $b$, and $a$ respectively!  Therefore the supremum and infimums of $A$ exist and are themselves defined as inputs of $r$.  Let $\alpha := \inf A$ and $\beta := \sup A$.  The notion that $f(\alpha)$ is on the unit sphere is intuitively obvious and not the question so I will only prove that $f(\beta)$ is on the unit sphere.  The proofs are also exactly the same!  \newline
+Assume towards a contradiction that $f(\beta)$ is not on the unit sphere $\Rightarrow d(f(\beta), {\bf 0}) \not = 1$.  Therefore we are left with two cases: \newline
+[Case $1$] $d(f(\beta), {\bf 0} ) < 1$ $\newline$
+Because of the above, there must exist an $\epsilon$ such that $d(f(x), {\bf 0}) < 1 - \epsilon$.  We can then consider the ball $B$ of radius $\epsilon$ centered at $f(\beta)$.  Elements of this ball are also within the unit ball and therefore of distance less than 1 of the origin.  Becauase for $\gamma \in B(f(\beta), \epsilon)$
+$$ d({\bf 0}, \gamma) \leq d({\bf 0}, f(\beta)) + d(f(\beta), {\bf 0}) < 1 - \epsilon + \epsilon = 1 $$
+By the continuity of $r$ there must exist some $\delta$ where if we consider $\xi$ with $|x - \xi| < \delta$.  And if we let $\delta'$ be the minimum of $\delta$ and $b - \beta$ we can find some $\xi < \beta$ such that $d(f(\xi), {\bf 0}) < 1$.  The existance of $\xi$ contradetics $\beta$ being the supremum of $A$. \newline
+[Case 2:] $d(f(\beta), {\bf 0}) > 1$ $\newline$
+The argument is exactly the same. \newline
+Therefore $\beta$ must be on the unit sphere and is the "last" time the particle is on the unit sphere.  
 \end{proof}
 \end{document}
