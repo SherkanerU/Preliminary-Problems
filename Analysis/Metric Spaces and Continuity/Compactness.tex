@@ -193,4 +193,26 @@ We know that $A$ is bounded below by $0$ therefore $\alpha := \inf \Psi$ exists.
 \newline
 To show uniqueness, assume that two points $x_0, y_0$ satisfy this property.  Construct the set $\{x_0, y_0\}$ which is a compact set.  We should have that $f(\{x_0, y_0\}) = \{x_0, y_0\}$ but this is a contradiction with the results of problem {\bf (7)}.
 \end{proof}
+$\newline$
+The next theme is about continuous functions on compact sets are automatically uniformally continuous!  Ie for $f : X \to Y$ with $X$ compact, then $f$ is uniformally continuous.
+\begin{proof}
+Assume the negation of uniform continuity:
+$$ \exists \epsilon >0 \ \ \forall \delta >0 \ \ \exists x,y \in X \ \  d(x,y) < \delta \ \ {\rm and} \ \ \varrho(f(x), f(y)) \geq \epsilon$$
+Using this rule we can then let $\delta_n := \frac{1}{n}$ and find sequences $(x_n)$ and $(y_n)$ with $d(x_n,y_n) \to 0$ and $\varrho(f(x_n), f(y_n)) \geq \epsilon$.  By compactness of $X$ there exists some $(x_{n_k}) \to x_0$ and we have that $d(x_0. y_{n_k}) \to 0$ which means that $y_{n_k} \to x_0$.  However $\varrho(f(x_{n_k}), f(y_{n_k})) \geq \epsilon$ for all $k$ and this is a contradiction.
+\end{proof}
+$\newline$
+{\bf (11)} Let $X$ be a compact subset of $\mathbb{R}^n$, and $f: X \to \mathbb{R}$ be continuous.  Prove that any given $\epsilon > 0$ there exists some $M$ such that for all $x,y$:
+$$ |f(x) - f(y)| \leq M|x-y| + \epsilon $$
+\begin{proof}
+We know that since $f$ is defined over a compact space and is continuous it must be uniformally continuous.  Letting $\epsilon$ be given we can find some $\delta_\epsilon >0$ where for all $x,y$:
+$$ d(x,y) < \delta_\epsilon \Rightarrow \varrho(f(x), f(y)) < \epsilon $$
+For those $x,y$ with $d(x,y) \geq \delta_\epsilon$ $X$ and ${\rm Im}\, f$ are compact we have the inequalities:
+$$ \delta  \leq |x-y| \leq diam\,X \text{ and } \varrho(f(x), f(y)) < diam \, {\rm Im}\,f $$
+If we let $M$ be such that $M\delta_\epsilon > diam \, {\rm Im}\, f$ then for arbitrary $x,y$: \newline
+If $d(x,y) < \delta_\epsilon$:
+$$ \varrho(f(x), f(y)) < \epsilon \leq Md(x,y) + \epsilon $$
+If $d(x,y) \geq \delta_\epsilon$:
+$$ \varrho(f(x), f(y)) < diam \, {\rm Im}\, f < M\delta_\epsilon \leq Md(x,y) + \epsilon $$
+\end{proof}
+Slightly confused here, was it meant that $M$ is dependant on $\epsilon$?  Also I did not utilize any of the properties from $\mathbb{R}$ or $\mathbb{R}^n$ and this works for continuous functions defined over any compact spaces.
 \end{document}
