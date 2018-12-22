@@ -60,7 +60,7 @@ $\newline$
 
 \end{proof}
 $\newline$
-{\bf (4} A sequence $(x_n)_{n=1}^\infty$ being convergent to a point $x_0$ is equivalent to every subsequence $(x_{n_k})$ of $(x_n)$ having a convergent subsequence $x_{n_{k_\ell}} \to x_0$.
+{\bf (4)} A sequence $(x_n)_{n=1}^\infty$ being convergent to a point $x_0$ is equivalent to every subsequence $(x_{n_k})$ of $(x_n)$ having a convergent subsequence $x_{n_{k_\ell}} \to x_0$.
 \begin{proof}
 This first way is easy since if $(x_n)$ is convergent to $x_0$ then its subsequences are as well, and subsequences of subsequences, are, of course, subsequences so they all converge to $x_0$ as well.  To show the other way, I will use contraposition.  Consider the negation of $x_n \to x_0$:
 $$ \exists \epsilon >0 \ \ \forall N_0 \ \ \exists n\geq N_0  \ \ d(x_n, x_0) \geq \epsilon$$
@@ -182,4 +182,15 @@ The next theme is about every sequence having a convergent subsequence which con
 \begin{proof}
 An equivalence to the definition of convergence is that, for a sequence $(x_n)_{n \in \mathbb{N}}$ if there is some $x_0$ where every sequence $(x_{n_k})_{k\in \mathbb{N}}$ has a further subsequence $(x_{n_{k_\ell}})_{\ell \in \mathbb{N}}$ with $x_{n_{k_\ell}} \to x_0$.  Then we can conclude $x_n \to x_0$.  These facts are equivalent, I'll include it as a lemma (4 probably).  To apply this fact to solve this problem fix an arbitrary subsequence $(x_{n_k})$ of $(x_n)$.  Since $(x_{n_k})$ is a sequence in $A$ which is compact there is a convergent subsequence of it $(x_{n_{k_\ell}})$.  Since $(x_{n_{k_\ell}})$ is itself a subsequence of $(x_n)$, by hypothesis we know that $x_{n_{k_\ell}} \to x$.  Since every sequence has a futher subsequence convergent to the same point $(x_n)$ is convergent!
 \end{proof} 
+$\newline$
+{\bf (10)} Let $X$ be a compact metric space and $f: X \to X$ be a contraction map:
+$$ \forall x,y \ \ f(f(x), f(y)) < d(x,y) $$
+Show that $f$ has a unique fixed point
+\begin{proof}
+Let the set $\Psi$ be defined as:
+$$ \Psi := \{ \gamma \in \mathbb{R} : \exists x\ \ \gamma = d(x , f(x)) \} $$
+We know that $A$ is bounded below by $0$ therefore $\alpha := \inf \Psi$ exists.  I will show that there exists a point $x$ such that $d(x, f(x)) = \alpha$.  Because $\alpha$ is an infimum we can find a sequence $(x_n)$ with $d(x_n, f(x_n)) \to \alpha$.  Since $x_n$ is a sequence in $X$, which is compact we have $x_{n_k} \to x_0$ and $d(x_0, f(x_0)) = \alpha $.    With this information we must conclude that $\alpha = 0$.  If $\alpha > 0$ then $x_0 \not= f(y_0)$ and since $x_0,f(x_0) \in X$ we can calculate $f(x_0), f(f(x_0)) \in X$.  By the contraction property of $f$ we know that $d(f(x_0), f(f(x_0))) < d(x_0, f(x_0)) = \alpha$ but this cannot be since $\alpha$ is a lower bound.  We must conclude that $\alpha = 0$ and therefore $d(x_0, f(x_0)) = 0 \iff f(x_0) = x_0$.
+\newline
+To show uniqueness, assume that two points $x_0, y_0$ satisfy this property.  Construct the set $\{x_0, y_0\}$ which is a compact set.  We should have that $f(\{x_0, y_0\}) = \{x_0, y_0\}$ but this is a contradiction with the results of problem {\bf (7)}.
+\end{proof}
 \end{document}
