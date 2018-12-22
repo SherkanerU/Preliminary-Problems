@@ -233,4 +233,8 @@ Such a mapping can be paramterized by the following:
 $$ f: [0,1) \to \mathbb{S}^1 \ \ \ \  f(t) :=  (\cos(2\pi t), \sin(2\pi t)) $$
 The surjectivity and injectivity properties of $f$ follow from this, as does continuity.  However, if we consider $f^{-1}: \mathbb{S}^1 \to [0,1)$ and in particular at the point $(1,0)$.  For any gap $\delta$ around $(0,1)$ we can find points on $[0,1)$ close the $0$ that map within $\delta$ of $(0,1)$ and points close to $1$ which map to within $\delta$ of $(0,1)$.  If it was required that $[0,1)$ had to be compact then to preserve the injectivity of $f$ the enpoints of the function would have to map to different locations and the above contradiction would not be obtained.
 \end{proof}
+$\newline$
+{\bf (12)} Let $(M,d)$ be a compact metric space and $T: M \to M$ satisfy:
+$$ d(x,y) \leq d(T(x), T(y)) $$
+for all pairs, ie, distances are non decreasing under T.  Define $x_1 := T(z)$ and $x_{n+1} := T(x_n)$.  Show that some subsequence of $(x_n)$ converges to $z$. 
 \end{document}
