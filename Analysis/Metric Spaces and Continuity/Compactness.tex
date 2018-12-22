@@ -215,4 +215,22 @@ If $d(x,y) \geq \delta_\epsilon$:
 $$ \varrho(f(x), f(y)) < diam \, {\rm Im}\, f < M\delta_\epsilon \leq Md(x,y) + \epsilon $$
 \end{proof}
 Slightly confused here, was it meant that $M$ is dependant on $\epsilon$?  Also I did not utilize any of the properties from $\mathbb{R}$ or $\mathbb{R}^n$ and this works for continuous functions defined over any compact spaces.
+\newline \newline
+{\bf (12)} Suppose that $X$ is a compact metric space, $Y$ is a metric space and $f : X \to Y$ is one-to-one, onto, and continuous.  Show that $f^{-1} : Y \to X$ is continuous.  Is the compactness of $X$ necessary? 
+\begin{proof}
+Since we know that $f^{-1}$ exists we can fix some arbitrary sequence $(y_n)_{n=1}^\infty$ convergent to $y_0$ in ${\rm Im}\, f$.  $f^{-1}$ is continuous iff:
+$$ f^{-1}(y_n) \to f^{-1}(y_0) $$
+We know that for all $n$, $y_n = f(x_n)$ and $y_0 = f(x_0)$.  So, $y_n$ omits a sequence $(x_n)$ in $X$.  Furthermore we can equivalenty state the above as:
+$$  f^{-1}(y_n) \to f^{-1}(y_0) \iff x_n \to x_0 $$
+Suppose that $x_n \not\to x_0$.  This implies the existance of some subsequence $(x_{n_k})$ such that for all $k$, $d(x_{n_k}, x_0) \geq \epsilon$.  There must be a subsequence  $(x_{n_{k_\ell}})$ that is convergent to $x_1 \not= x_0$ because $X$ is compact.  Since $y_n \to y_0 \iff f(x_n) \to f(x_0)$ it must be that $f(x_{n_{k_\ell}}) \to f(x_0)$ but also by the continuity of $f$ we have that $f(x_{n_{k_\ell}}) \to f(x_1)$ which are not the same point by the one to one property of $f$.  This is a contradiction and we habe that:
+$$ x_n \to x_0 \iff f^{-1}(y_n) \to f^{-1}(y_0) $$
+Which shows the continuity of $f^{-1}$.
+\end{proof}
+$\newline$
+{\bf (12)} This counter example shows why the above requires compactness.  Take the interval $[0,1)$ and wrap it around the unit circle $\mathbb{S}^1$.  Letting $f: [0,1) \to \mathbb{S}^1$ be this continuous mapping with $\lim_{x\to 1^-}f(x) = f(0)$.
+\begin{proof}
+Such a mapping can be paramterized by the following:
+$$ f: [0,1) \to \mathbb{S}^1 \ \ \ \  f(t) :=  (\cos(2\pi t), \sin(2\pi t)) $$
+The surjectivity and injectivity properties of $f$ follow from this, as does continuity.  However, if we consider $f^{-1}: \mathbb{S}^1 \to [0,1)$ and in particular at the point $(1,0)$.  For any gap $\delta$ around $(0,1)$ we can find points on $[0,1)$ close the $0$ that map within $\delta$ of $(0,1)$ and points close to $1$ which map to within $\delta$ of $(0,1)$.  If it was required that $[0,1)$ had to be compact then to preserve the injectivity of $f$ the enpoints of the function would have to map to different locations and the above contradiction would not be obtained.
+\end{proof}
 \end{document}
