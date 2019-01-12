@@ -237,4 +237,13 @@ $\newline$
 {\bf (12)} Let $(M,d)$ be a compact metric space and $T: M \to M$ satisfy:
 $$ d(x,y) \leq d(T(x), T(y)) $$
 for all pairs, ie, distances are non decreasing under T.  Define $x_1 := T(z)$ and $x_{n+1} := T(x_n)$.  Show that some subsequence of $(x_n)$ converges to $z$. 
+\begin{proof}
+Notice the following property about $T$ and the series $(x_n)_{n=1}^\infty$, for $\ell < g$ arbitrary:
+$$ d(x_\ell, x_g) = d(T(x_{\ell-1}), T(x_{g-1})) \geq d(x_{\ell-1}, x_{g - 1}) = d(T(x_{\ell - 2}), T(x_{g-2})) $$
+$$ \geq d(x_{\ell -2}, x_{g-2}) \geq \dots \geq d(x_{\ell - g}, z) $$
+Assume towards a contradiction that $(x_n)$ does not have a subsequence convergent to $z$.  This implies the existance of some $\epsilon >0$ such that for all $n$, $d(x_n, z) \geq \epsilon$.  However, since $(x_n)$ is defined over a compact space we have the existance of $(x_{n_k})$ which is convergent to some $x^* \in M$.  Since this subsequence is convergent it is also cauchy.  Therefore we can find $N \leq \ell < g$ such that:
+$$ d(x_{n_\ell}, x_{n_g}) < \epsilon $$
+$$ \Rightarrow d(x_{n_\ell - n_g}, z) \leq d(x_{n_\ell}, x_{n_g}) < \epsilon $$
+Which is a contradiciton with our initial hypothesis.
+\end{proof}
 \end{document}
